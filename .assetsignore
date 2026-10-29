@@ -1,0 +1,13 @@
+# Wrangler uploads the root of the repository, because the site is served from
+# it. Everything that is not part of the site has to be named here, or it ends
+# up on the public web. The format is the one of `.gitignore`.
+
+# Configuration and the automation of the repository.
+.*
+wrangler.jsonc
+
+# The deploy workflow installs Wrangler into the directory that it uploads,
+# because the action runs `npm i wrangler` before it deploys.
+node_modules/
+package.json
+package-lock.json
